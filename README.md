@@ -20,7 +20,7 @@ You may also see any lint errors in the console.
 
 ### Cricar Arquivo
 
-/src/config/ 'API_KEY.js' -> Com a key do site Themovie
+/src/config/ 'API_KEY.js' -> Com a key do site themoviedb.org
 
 ~~~javascript
 export default function API_KEY () {
