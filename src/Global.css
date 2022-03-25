@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('./fonts/Roboto-Thin.ttf')
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto-Thin', monospace;
+}
+
+body {
+  background-color: #000;
+  color: #fff
+}
