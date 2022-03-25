@@ -15,7 +15,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
-<img width="500" src="other/img/inicio.png"> <img src="other/img/film.png" widht="500"> 
+<img width="500" src="other/img/inicio.png"> <img src="other/img/film.png" width="500"> 
 
 
 ### Cricar Arquivo

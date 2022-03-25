@@ -1,27 +1,27 @@
 import { Container, Movie, MovieList } from "../Home/style"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import API_KEY from "../../config/API_KEY"
 import PATH_IMG from "../../config/PATH_IMG"
-import { Link } from "react-router-dom"
 import LinkRotas from "../../components/LinkRotas/LinkRotas"
 
-export default function Home() {
+export default function Recentes() {
 
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
 
-    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY()}&language=pt-BR&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY()}&language=pt-BR`)
       .then(response => response.json())
       .then(data => {
         setMovies(data.results)
+        console.log(data)
       })
   }, [])
 
   return (
     <Container>
       <LinkRotas />
-
       <MovieList>
 
         {movies.map(movie => {
