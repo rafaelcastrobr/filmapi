@@ -4,6 +4,7 @@ import API_KEY from "../../config/API_KEY"
 import PATH_IMG from "../../config/PATH_IMG"
 import { Link } from "react-router-dom"
 import LinkRotas from "../../components/LinkRotas/LinkRotas"
+import axios from "axios"
 
 export default function Home() {
 
@@ -11,10 +12,10 @@ export default function Home() {
 
   useEffect(() => {
 
-    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY()}&language=pt-BR&page=1`)
-      .then(response => response.json())
+    //fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY()}&language=pt-BR&page=1`)
+    axios.get('/.netlify/functions/hello-world')
       .then(data => {
-        setMovies(data.results)
+        console.log(JSON.parse(data.message))
       })
   }, [])
 

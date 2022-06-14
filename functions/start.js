@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const { API_KEY } = process.env
+// const { API_KEY } = process.env
 
 const url = `https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}`
 
@@ -15,9 +15,9 @@ const vai = url => {
 
 exports.handler = async function (event, context) {
 
-  return axios.get(url, { headers: { Accept: "application/json"} })
+  return axios.get(url)
   .then((res) => ({
     statusCode: 200,
-    body: res.data,
+    body: JSON.stringify(res.results) 
   }))
 }
